@@ -6,9 +6,24 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
+  <style>
+    table {
+      table-layout: fixed ;
+       width: 100% ;
+      
+      }
+    td {
+        width: 25% ;
+      }
+  </style>
   </head>
 
   <body>
+    <nav>
+      <%= link_to :authors, authors_path %>
+      <%= link_to :genres, genres_path %>
+      <%= link_to :books, books_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>
